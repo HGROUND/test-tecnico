@@ -1,0 +1,33 @@
+<div class="card">
+  <div class="card-header" style="width: 100%; padding-top: 5px; background-color: #5c6bc0; color: white; font-weight: bold; border-radius: 10px; font-size: large; text-align: center;">
+    Crear un nuevo Contacto
+  </div>
+  <div class="card-body">
+    <form style="width: 100%;">
+      <div class="row">
+        <div class="col">
+          <input type="text" placeholder="Nombres" (change)="obtenerNombres($event)">
+          <input type="text" placeholder="Apellidos" (change)="obtenerApellidos($event)">
+          <input type="text" placeholder="E-mail" (change)="obtenerEmail($event)">
+          <input type="date" placeholder="Fecha de nacimiento" (change)="obtenerFechaNacimiento($event)">
+          <input type="tel" placeholder="Cel/Tel" (change)="obtenerContacto($event)">
+          <input type="text" placeholder="Dirección" (change)="obtenerDireccion($event)">
+          <select id="contact" name="Tipo de contacto" (change)="obtenerCliente($event)">
+            <option>Cliente</option>
+            <option>Cliente potencial</option>
+          </select>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="card-footer text-muted" style="text-align: center;">
+    <button type="button" class="btn btn-secondary">
+      Cancelar
+      <i class="bi bi-x-circle"></i>
+    </button>
+    <button type="button" class="btn btn-lg btn-success" (click)="crearCliente()" style="margin-left: 10px;">
+      Agregar
+      <i class="bi bi-person-plus-fill"></i>
+    </button>
+  </div>
+</div>

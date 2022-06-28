@@ -1,0 +1,66 @@
+<div class="container" style="width: 90%; margin-top: 5%; padding: 0; display:flex; justify-content: center; align-items: center; align-content: flex-end;">
+  <div class="card" style="margin: 0; padding: 0;">
+    <div class="card-body">
+      <div style="display: flex; justify-content: space-between;">
+        <h4 class="card-title" style=" width:50%; color: #5c6bc0; font-weight: bold;">Lista de Contactos</h4>
+        <div class="input-group mb-3" style="width: 40%;">
+          <span class="input-group-text" id="basic-addon1" style=" background-color: #5c6bc0; color: white;"> <i class="bi bi-search"></i> </span>
+          <input type="text" class="form-control" placeholder="Buscar Contacto" aria-label="Buscar Contacto" aria-describedby="basic-addon1" (change)="buscarFiltro($event)">
+        </div>
+      </div>
+
+      <!-- Listar clientes  -->
+      <table class="table table-hover table-borderless" style="border-radius: 100%;">
+        <thead style="text-align: center; background-color: #5c6bc0; color: white;">
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Cel/Tel</th>
+            <th>Fecha de Nacimiento</th>
+            <th>Dirección</th>
+            <th>Tipo de Contacto</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody style="text-align: center;">
+          <tr class="bg-blue" *ngFor="let item of clientes">
+            <th> {{ item.id }}</th>
+            <td>{{ item.nombres }} {{ item.apellidos }}</td>
+            <td>{{ item.email }}</td>
+            <td>{{ item.contacto }}</td>
+            <td>{{ item.fechaNacimiento }}</td>
+            <td>{{ item.direccion }}</td>
+            <td>{{ item.cliente }}</td>
+            <td>
+              <div style="display: flex; justify-content: space-between;">
+                <button type="button" class="btn btn-danger" style="font-size: small; margin-left: 5px; color: white; border-radius: 100%;" (click)="borrarContacto(item.id)">
+                  <i class="bi bi-trash3-fill"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Button trigger modal -->
+      <div style="display: flex; justify-content: center;">
+        <button type="button" class="btn btn-primary" #myModalClose data-bs-toggle="modal" data-bs-target="#crearCliente" style="background-color: #5c6bc0;">
+          <span> Agregar </span>
+          <i class="bi bi-person-plus-fill"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="crearCliente" tabindex="-1" aria-labelledby="crearClienteLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="background-color: transparent; border: 0;">
+          <app-nuevo-usuario (parentFunction)="datosCliente($event)"></app-nuevo-usuario>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+

@@ -1,0 +1,32 @@
+table{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  border-collapse: collapse !important;
+  border-spacing: 2px;
+  border-radius: 1em !important;
+  overflow: hidden;
+}
+
+tbody{
+  border-radius: 20px;
+}
+
+.bg-blue {
+  background-color: #ebf5fb;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 10px solid white;
+}
+
+.bg-blue:hover {
+  background-color: #7c8ceb6e;
+  color: #eee;
+  cursor: pointer
+}
+
+button{
+  border-radius: 40px;
+}
+

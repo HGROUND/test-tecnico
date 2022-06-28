@@ -1,0 +1,38 @@
+.card{
+  border-radius: 10px;
+}
+.card-body{
+  color: #212121;
+}
+
+input {
+  color: #212121;
+  margin-top: 10px;
+  border: 2px #5c6bc0;
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+  border-style: solid;
+  width: 100%;
+  display: flex;
+}
+
+input::placeholder{
+  color: #212121;
+}
+
+#contact {
+  color: #212121;
+  margin-top: 10px;
+  border: 2px #5c6bc0;
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+  border-style: solid;
+  width: 100%;
+  display: flex;
+}
+
+button{
+  border-radius: 30px;
+  font-size: medium;
+}
+
